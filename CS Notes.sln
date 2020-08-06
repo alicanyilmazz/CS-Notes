@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflections", "Reflections\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{8012D190-0CBA-41D5-8563-BE205221583E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SustainabilityWithReferences", "SustainabilityWithReferences\SustainabilityWithReferences.csproj", "{D6FE6A8D-1D36-41E6-9B52-E2972E7E89A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{8012D190-0CBA-41D5-8563-BE205221583E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8012D190-0CBA-41D5-8563-BE205221583E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8012D190-0CBA-41D5-8563-BE205221583E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FE6A8D-1D36-41E6-9B52-E2972E7E89A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FE6A8D-1D36-41E6-9B52-E2972E7E89A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FE6A8D-1D36-41E6-9B52-E2972E7E89A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FE6A8D-1D36-41E6-9B52-E2972E7E89A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
