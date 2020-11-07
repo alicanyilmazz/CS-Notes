@@ -1,4 +1,13 @@
-####C#　
+### C# Clean Code Notes
+- I will explain you section by section clean code examples below.
+
+###Sustainability With References
+                
+-----
+
+- First of all, I will give you examples on writing reference-based code that is necessary to write clean code.
+- We will first examine the `Customer Manager`  class and then the `Product Manager`   class.
+
 
 ```javascript
  class Program
@@ -14,3 +23,4 @@
         }
     }
 ```
+
