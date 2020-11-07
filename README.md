@@ -1,10 +1,11 @@
 ### C# Clean Code Notes
 - I will explain you section by section clean code examples below.
 
+
 ###Sustainability With References
                 
 -----
-
+- **First of all, we will give a bad code example and then we will make it better step by step.**
 - First of all, I will give you examples on writing reference-based code that is necessary to write clean code.
 - We will first examine the `Customer Manager`  class and then the `Product Manager`   class.
 
@@ -65,7 +66,7 @@
     }
 ```
 
-- `utility` 
+
 
 - There is a `Validate`  method belonging to the `utility`  class.
 Because the `Validate` method uses `IValidator`  (`Fluent Api-Fluent Validation` ) type, it checks the incoming entity according to the relevant validator class.
@@ -88,3 +89,62 @@ Because the `Validate` method uses `IValidator`  (`Fluent Api-Fluent Validation`
         }
     }
 ```
+
+
+- As we have seen in `Customer Validation` , if we want to validate a entity, we must create a  `validator`  class of it.
+
+- `AbstractValidator <Customer>`  structure comes from fluent validation and implements the IValidate interface.
+
+- If we go back to the  `CustomerManager`  class, you will see that we are going to the `CustomerDal`  class.
+
+####CustomerDal.cs
+```javascript
+  public class CustomerDal
+    {
+        DatabaseTypes _databaseTypes;
+        public CustomerDal(DatabaseTypes databaseTypes)
+        {
+            _databaseTypes = databaseTypes;
+        }
+        public void Add(Customer customer)
+        {
+            if (_databaseTypes==DatabaseTypes.Oracle)
+            {
+                Console.WriteLine(customer.CustomerName+" Customer added to Database with Oracle.");
+            }
+            else
+            {
+                Console.WriteLine(customer.CustomerName+" Customer added to Database with Mssql.");
+            }
+        }
+
+        public bool CustomerExist(Customer customer)
+        {
+            return true;
+        }
+    }
+```
+
+
+
+- The `CustomerDal`  class works with the Database Types given to it.(Mssql or Oracle etc.)
+
+####DatabaseTypes.cs
+```javascript
+      public enum DatabaseTypes
+    {
+        Oracle,SqlServer
+    }
+```
+
+- Let's take a look at the `Customer Manager`  class again.
+
+-You will see the ` customerDal.Add(customer);`  code and it will add the person to the database according to the database type given previously.
+
+- This code structure is generally used when you are a `  junior software developer` .
+
+- **Next time we'll look at how we can make this code better.**
+
+- **If you can't wait, please check out the code in the SustainabilityWithReferences folder.**
+
+- `Alican Yılmaz` 
