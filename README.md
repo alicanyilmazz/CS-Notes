@@ -141,8 +141,6 @@ Because the `Validate` method uses `IValidator`  (`Fluent Api-Fluent Validation`
 
 -You will see the ` customerDal.Add(customer);`  code and it will add the person to the database according to the database type given previously.
 
-- This code structure is generally used when you are a `  junior software developer` .
-
 - **Next time we'll look at how we can make this code better.**
 
 - **If you can't wait, please check out the code in the SustainabilityWithReferences folder.**
